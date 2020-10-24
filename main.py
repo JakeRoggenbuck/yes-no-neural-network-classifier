@@ -16,6 +16,5 @@ model.compile(loss='mean_squared_error', optimizer=sgd)
 data = input_data.InputData()
 model.fit(data.X, data.Y, epochs=1500, verbose=False)
 
-test = input("Word: ").lower()
-gen = np.array([input_data.make_data(test)])
-print(model.predict(gen))
+print(model.summary())
+model.save('neural_network.model')
